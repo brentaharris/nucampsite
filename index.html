@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> <!-- for English language -->
 
-<!-- coded by Brent -->
+<!-- coded by Brent for nuCamp Bootcamp -->
 
     <head>
         <!-- Required meta tags always come first -->
@@ -11,7 +11,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
-        <!-- other css links -->
+        <!-- other CSS links -->
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
@@ -32,14 +32,16 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col col-md-4 col-xl-2 mt-4">
+                    <button class="btn btn-info btn-lg">Reserve Campsite</button>
+                </div>
             </div>
         </div>
-
     </header>
 
     <!-- start navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        <div class="container">
+        <div class="container">                             
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
@@ -48,16 +50,17 @@
                     <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact Us</a></li>
-                </ul>
+                </ul>                                         
             </div>
         </div>
     </nav>
-
+                    
+    <!-- start main content -->
     <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3 order-sm-last">
                 <h2 class="text-sm-right">Discover & Review</h2>
-            </div>
+            </div>             
             <div class="col">
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail thumbnail" />
@@ -65,7 +68,7 @@
                         <h3>Our Campsites</h3>
                         <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
                     </div>
-                </div>
+                </div>                 
             </div>
         </div>
 
@@ -74,12 +77,17 @@
             <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                        <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake Thumbnail" />
+                </div>
             </div>
         </div>
 
-
+              
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3 order-sm-last">
                 <h2 class="text-sm-right">Our Community Partners</h2>
@@ -94,7 +102,46 @@
                 </div>
             </div>
         </div>
+
+        <div class="row row-content">
+            <div class="col col-lg-6 mx-auto"> <!-- class text wanted to use 'sm' but adding 'lg' makes this better across all view ports -->
+                <div class="card">
+                    <h3 class="bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="row form-group">
+                                <label class="col-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                                <div class="col">
+                                    <select class="form-control" name="numCampers" id="numCampers">
+                                        <option value="">Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">6</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <label class="col-12 col-sm-6 col-form-label" for="date">Date</label>
+                                <div class="col">
+                                    <input class="form-control" type="date" id="date" name="date" placeholder="date">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                </div>
+                            </div>
+                    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <footer class="site-footer">
         <div class="container">
